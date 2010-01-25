@@ -10,6 +10,7 @@
     <script type="text/javascript">
 
     var div = document.getElementById('content_div');
+    var msg = new gadgets.MiniMessage(__MODULE_ID__, document.getElementById("messageBox"));
 
     function buttonClicked() {
       var value = parseInt(wave.getState().get('count', '0'));
@@ -19,7 +20,6 @@
     function stateUpdated() {
       if(!wave.getState().get('count')) {
         div.innerHTML = "Hello, " + "The count is 0."
-        var msg = new gadgets.MiniMessage(__MODULE_ID__, document.getElementById("messageBox"));
         msg.createDismissibleMessage("The score is 0");
       }
       else {
