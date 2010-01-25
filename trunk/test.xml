@@ -50,8 +50,8 @@
     }
 
     function stateUpdated() {
-      logThis("Entro en stateUpdated");
-      var hello = getGreetings();
+      /*logThis("Entro en stateUpdated");*/
+      var hello = null;
       if (!hello) {
 	hello = "hola"
       }
