@@ -11,47 +11,12 @@
 
     var div = document.getElementById('content_div');
 
-    function logThis(obj) {
-     /*if (window.console && console.log) {
-       console.log(obj);
-     } else { */
-       msg.createDismissibleMessage(obj.toString());
-     /* } */
-    }
-
-    function getGreetings() {
-     /* logThis("Entro en getGreetings");
-     var participants = wave.getParticipants();
-     var name = null;
-     if (participants) {
-      for (var i = 0; i < participants.length; ++i) {
-	if (participants[i] = wave.getViewer()) {
-	  name = participants[i].getName();
-	  if (!name) {
-	   name = participants[i].getId();
-	  }
-	}
-       }
-/* } */
-}
-   var hello = "Hello";
-   logThis("'hello' value is: " + hello);
-   if (name) {
-	hello = hello + ", " + name;
-   }
-   logThis("New 'hello' value is: " + hello);
-   logThis(wave.getState());
-   return hello; */
-   return "Hello";
-}
-
     function buttonClicked() {
       var value = parseInt(wave.getState().get('count', '0'));
       wave.getState().submitDelta({'count': value + 1});
     }
 
     function stateUpdated() {
-      /*logThis("Entro en stateUpdated");*/
       if(!wave.getState().get('count')) {
         div.innerHTML = "The count is 0."
       }
