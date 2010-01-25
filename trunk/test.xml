@@ -19,9 +19,12 @@
     function stateUpdated() {
       if(!wave.getState().get('count')) {
         div.innerHTML = "Hello, " + "The count is 0."
+        var msg = new gadgets.MiniMessage(__MODULE_ID__, document.getElementById("messageBox"));
+        msg.createDismissibleMessage("The score is 0");
       }
       else {
         div.innerHTML = "Hello, " + "The count is " + wave.getState().get('count');
+        msg.createDismissibleMessage("The score is " + wave.getState().get('count'));
       } 
     }
  
