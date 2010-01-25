@@ -2,6 +2,7 @@
 <Module>
   <ModulePrefs title="Hello Wave">
     <Require feature="wave-preview" /> 
+    <Require feature="minimessage"/>
   </ModulePrefs>
   <Content type="html">
     <![CDATA[     
