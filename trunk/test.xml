@@ -11,13 +11,24 @@
     var div = document.getElementById('content_div');
 
     function getGreetings() {
-      var viewer = wave.getViewer();
-      var name = viewer.getName();
-      if (!name) {
-        name = viewer.getId();
-      }
-      return "Hello, " + name;
-    }
+     var participants = wave.getParticipants();
+     var name = null;
+     if (participants) {
+      for (var i = 0; i < participants.length; ++i) {
+	if (participants[i] = wave.getViewer()) {
+	  name = participants[i].getName();
+	  if (!name) {
+	   name = participants[i].getId();
+	  }
+	}
+       }
+/* } */
+}
+   var hello = "Hello";
+   if (name) {
+	hello = hello + ", " + name;
+   }
+}
 
     function buttonClicked() {
       var value = parseInt(wave.getState().get('count', '0'));
