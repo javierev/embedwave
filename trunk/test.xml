@@ -19,6 +19,7 @@
     }
 
     function getGreetings() {
+     logThis("Entro en getGreetings");
      var participants = wave.getParticipants();
      var name = null;
      if (participants) {
@@ -48,6 +49,7 @@
     }
 
     function stateUpdated() {
+      logThis("Entro en stateUpdated");
       var hello = getGreetings();
       if (!hello) {
 	hello = "hola"
