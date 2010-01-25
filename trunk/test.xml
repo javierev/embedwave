@@ -9,6 +9,14 @@
     <script type="text/javascript">
 
     var div = document.getElementById('content_div');
+    function getGreetings() {
+      var viewer = wave.getViewer();
+      var name = viewer.getName();
+      if (!name) {
+        name = viewer.getId();
+      }
+      return "Hello, " + name + "<br />";
+    }
 
     function buttonClicked() {
       var value = parseInt(wave.getState().get('count', '0'));
@@ -16,11 +24,12 @@
     }
 
     function stateUpdated() {
+      var greetings = getGreetings();
       if(!wave.getState().get('count')) {
-        div.innerHTML = "The count is 0."
+        div.innerHTML = greetings + "The count is 0."
       }
       else {
-        div.innerHTML = "The count is " + wave.getState().get('count');
+        div.innerHTML = greetings + "The count is " + wave.getState().get('count');
       } 
     }
  
