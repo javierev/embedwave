@@ -18,7 +18,7 @@
 
     function stateUpdated() {
       if(!wave.getState().get('count')) {
-        div.innerHTML = "The count is 0."
+        div.innerHTML = "Hello, " + "The count is 0."
       }
       else {
         div.innerHTML = "The count is " + wave.getState().get('count');
