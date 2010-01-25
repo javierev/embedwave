@@ -10,6 +10,14 @@
 
     var div = document.getElementById('content_div');
 
+    function logThis(obj) {
+     if (window.console && console.log) {
+       console.log(obj);
+     } else {
+       msg.createDismissibleMessage(obj.toString());
+     }
+    }
+
     function getGreetings() {
      var participants = wave.getParticipants();
      var name = null;
@@ -25,12 +33,13 @@
 /* } */
 }
    var hello = "Hello";
-   console.log("'hello' value is: " + hello);
+   logThis("'hello' value is: " + hello);
    if (name) {
 	hello = hello + ", " + name;
    }
-   console.log("New 'hello' value is: " + hello);
-   console.log(wave.getState());
+   logThis("New 'hello' value is: " + hello);
+   logThis(wave.getState());
+   return hello;
 }
 
     function buttonClicked() {
