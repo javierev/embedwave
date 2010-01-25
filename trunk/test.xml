@@ -9,6 +9,7 @@
     <script type="text/javascript">
 
     var div = document.getElementById('content_div');
+
     function getGreetings() {
       var viewer = wave.getViewer();
       var name = viewer.getName();
@@ -26,10 +27,10 @@
     function stateUpdated() {
       var greetings = getGreetings();
       if(!wave.getState().get('count')) {
-        div.innerHTML = greetings + "The count is 0."
+        div.innerHTML = "The count is 0."
       }
       else {
-        div.innerHTML = greetings + "The count is " + wave.getState().get('count');
+        div.innerHTML = "The count is " + wave.getState().get('count');
       } 
     }
  
