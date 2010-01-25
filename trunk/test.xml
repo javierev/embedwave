@@ -19,7 +19,7 @@
     }
 
     function getGreetings() {
-     logThis("Entro en getGreetings");
+     /* logThis("Entro en getGreetings");
      var participants = wave.getParticipants();
      var name = null;
      if (participants) {
@@ -40,7 +40,8 @@
    }
    logThis("New 'hello' value is: " + hello);
    logThis(wave.getState());
-   return hello;
+   return hello; */
+   return "Hello";
 }
 
     function buttonClicked() {
