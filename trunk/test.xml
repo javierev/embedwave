@@ -25,7 +25,6 @@
     }
 
     function stateUpdated() {
-      var greetings = getGreetings();
       if(!wave.getState().get('count')) {
         div.innerHTML = "The count is 0."
       }
