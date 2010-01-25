@@ -25,9 +25,12 @@
 /* } */
 }
    var hello = "Hello";
+   console.log("'hello' value is: " + hello);
    if (name) {
 	hello = hello + ", " + name;
    }
+   console.log("New 'hello' value is: " + hello);
+   console.log(wave.getState());
 }
 
     function buttonClicked() {
