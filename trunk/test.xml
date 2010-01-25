@@ -51,15 +51,11 @@
 
     function stateUpdated() {
       /*logThis("Entro en stateUpdated");*/
-      var hello = null;
-      if (!hello) {
-	hello = "hola"
-      }
       if(!wave.getState().get('count')) {
-        div.innerHTML = hello + "The count is 0."
+        div.innerHTML = "Hello, " + "The count is 0."
       }
       else {
-        div.innerHTML = hello + "The count is " + wave.getState().get('count');
+        div.innerHTML = "Hello, "+ "The count is " + wave.getState().get('count');
       } 
     }
  
