@@ -11,11 +11,11 @@
     var div = document.getElementById('content_div');
 
     function logThis(obj) {
-     if (window.console && console.log) {
+     /*if (window.console && console.log) {
        console.log(obj);
-     } else {
+     } else { */
        msg.createDismissibleMessage(obj.toString());
-     }
+     /* } */
     }
 
     function getGreetings() {
